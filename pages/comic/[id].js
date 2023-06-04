@@ -1,3 +1,3 @@
 export default function Comic() {
-    return <>null<style jsx>{``}</style></>
+  return <>null<style jsx>{``}</style></>
 }
