@@ -2,25 +2,16 @@ import { Container, Text } from "@nextui-org/react";
 import Link from 'next/link'
 
 export function Header() {
-  return <Container
-    as="header"
-    responsive
-    display="flex"
-    justify="space-between"
-  >
-    <div>
-      <Text small>next<Text>xkcd</Text></Text>
+  return <header className="flex justify-between items-center p-4 m-auto"  >
+    <div className="">
+      <h1 className="font-bold">next<span className="font-light">xkcd</span></h1>
     </div>
     <nav>
-      <Container 
-      display="flex" 
-      direction="row" 
-      gap={4} responsive
-      >
-        <Link href='/'>Home</Link>
-        <Link href='/'>About</Link>
-        <Link href='/'>Search</Link>
-      </Container>
+      <ul className="flex flex-row gap-2">
+        <li><Link href='/' className="text-sm font-bold">Home</Link></li>
+        <li><Link href='/about' className="text-sm font-bold">About</Link></li>
+        <li><Link href='/search'className="text-sm font-bold">Search</Link></li>
+      </ul>
     </nav>
-  </Container>
+  </header>
 }
